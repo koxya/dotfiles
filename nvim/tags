@@ -1,0 +1,115 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/root/.config/nvim/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+auto-save.nvim	lazy-lock.json	/^  "auto-save.nvim": { "branch": "main", "commit": "979b6c82f60cfa80f4cf437d77446d0ded0addf0" },$/;"	o
+branch	lazy-lock.json	/^  "auto-save.nvim": { "branch": "main", "commit": "979b6c82f60cfa80f4cf437d77446d0ded0addf0" },$/;"	s	object:auto-save.nvim
+branch	lazy-lock.json	/^  "bufferline.nvim": { "branch": "main", "commit": "ef4fdc5cea3473801dce89b5fdfe633380c80c65" },$/;"	s	object:bufferline.nvim
+branch	lazy-lock.json	/^  "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },$/;"	s	object:cmp-buffer
+branch	lazy-lock.json	/^  "cmp-cmdline": { "branch": "main", "commit": "8ee981b4a91f536f52add291594e89fb6645e451" },$/;"	s	object:cmp-cmdline
+branch	lazy-lock.json	/^  "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },$/;"	s	object:cmp-nvim-lsp
+branch	lazy-lock.json	/^  "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },$/;"	s	object:cmp-path
+branch	lazy-lock.json	/^  "diffview.nvim": { "branch": "main", "commit": "9f00ed07c16662bd4280ecc4bfe7d35a65b1f6b7" },$/;"	s	object:diffview.nvim
+branch	lazy-lock.json	/^  "github-nvim-theme": { "branch": "main", "commit": "62b7b54a90c70c20cd1641f9facfced46bdd3561" /;"	s	object:github-nvim-theme
+branch	lazy-lock.json	/^  "gitsigns.nvim": { "branch": "main", "commit": "4455bb5364d29ff86639dfd5533d4fe4b48192d4" },$/;"	s	object:gitsigns.nvim
+branch	lazy-lock.json	/^  "indent-blankline.nvim": { "branch": "master", "commit": "7075d7861f7a6bbf0de0298c83f8a13195e6/;"	s	object:indent-blankline.nvim
+branch	lazy-lock.json	/^  "lazy.nvim": { "branch": "main", "commit": "d1b02c2dda88422ca573f2a1ebdfb213ce0124d6" },$/;"	s	object:lazy.nvim
+branch	lazy-lock.json	/^  "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },$/;"	s	object:lualine.nvim
+branch	lazy-lock.json	/^  "mason-lspconfig.nvim": { "branch": "main", "commit": "5230617372e656d4a2e1e236e03bf7e7b4b9727/;"	s	object:mason-lspconfig.nvim
+branch	lazy-lock.json	/^  "mason.nvim": { "branch": "main", "commit": "7d7efc738e08fc5bee822857db45cb6103f0b0c1" },$/;"	s	object:mason.nvim
+branch	lazy-lock.json	/^  "modes.nvim": { "branch": "main", "commit": "4d97a51ebbdb649b85f6d79da0009fddd7081a6b" },$/;"	s	object:modes.nvim
+branch	lazy-lock.json	/^  "neogit": { "branch": "master", "commit": "4cebc271b13cb7af6b5a3e8ad76a356660c0c00c" },$/;"	s	object:neogit
+branch	lazy-lock.json	/^  "null-ls.nvim": { "branch": "main", "commit": "a138b14099e9623832027ea12b4631ddd2a49256" },$/;"	s	object:null-ls.nvim
+branch	lazy-lock.json	/^  "nvim-autopairs": { "branch": "master", "commit": "59df87a84c80a357ca8d8fe86e451b93ac476ccc" }/;"	s	object:nvim-autopairs
+branch	lazy-lock.json	/^  "nvim-cmp": { "branch": "main", "commit": "b5a636d46c69bb371995c22d7a10ee1544004879" },$/;"	s	object:nvim-cmp
+branch	lazy-lock.json	/^  "nvim-lspconfig": { "branch": "master", "commit": "0f598b9ab9f2a6d7e137074be99c8d89af44b990" }/;"	s	object:nvim-lspconfig
+branch	lazy-lock.json	/^  "nvim-surround": { "branch": "main", "commit": "211eaad7c6d01ef4ac02cba9052b3082ec232101" },$/;"	s	object:nvim-surround
+branch	lazy-lock.json	/^  "nvim-tree.lua": { "branch": "master", "commit": "f5d970d4506f385b29534252d8c15a782fa53034" },$/;"	s	object:nvim-tree.lua
+branch	lazy-lock.json	/^  "nvim-treesitter": { "branch": "master", "commit": "2c59e0ff3da6514b03d853ebecb6c36c515a5d7d" /;"	s	object:nvim-treesitter
+branch	lazy-lock.json	/^  "nvim-web-devicons": { "branch": "master", "commit": "2a125024a137677930efcfdf720f205504c97268/;"	s	object:nvim-web-devicons
+branch	lazy-lock.json	/^  "plenary.nvim": { "branch": "master", "commit": "499e0743cf5e8075cd32af68baa3946a1c76adf1" },$/;"	s	object:plenary.nvim
+branch	lazy-lock.json	/^  "sqlite.lua": { "branch": "master", "commit": "b7e28c8463254c46a8e61c52d27d6a2040492fc3" },$/;"	s	object:sqlite.lua
+branch	lazy-lock.json	/^  "telescope-frecency.nvim": { "branch": "master", "commit": "0a4a521471141ae3c94ff0ebcffcaff3c3/;"	s	object:telescope-frecency.nvim
+branch	lazy-lock.json	/^  "telescope.nvim": { "branch": "master", "commit": "42267407ae588fd6c07238777d48869571193a49" }/;"	s	object:telescope.nvim
+branch	lazy-lock.json	/^  "toggleterm.nvim": { "branch": "main", "commit": "cf146a267a6a7db62b1e2aff40414b20081048a1" },$/;"	s	object:toggleterm.nvim
+branch	lazy-lock.json	/^  "tokyonight.nvim": { "branch": "main", "commit": "161114bd39b990995e08dbf941f6821afbdcd666" },$/;"	s	object:tokyonight.nvim
+branch	lazy-lock.json	/^  "trouble.nvim": { "branch": "main", "commit": "2af0dd9767526410c88c628f1cbfcb6cf22dd683" },$/;"	s	object:trouble.nvim
+branch	lazy-lock.json	/^  "vim-quickhl": { "branch": "master", "commit": "be1f44169c3fdee3beab629e83380515da03835e" }$/;"	s	object:vim-quickhl
+bufferline.nvim	lazy-lock.json	/^  "bufferline.nvim": { "branch": "main", "commit": "ef4fdc5cea3473801dce89b5fdfe633380c80c65" },$/;"	o
+cmp-buffer	lazy-lock.json	/^  "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },$/;"	o
+cmp-cmdline	lazy-lock.json	/^  "cmp-cmdline": { "branch": "main", "commit": "8ee981b4a91f536f52add291594e89fb6645e451" },$/;"	o
+cmp-nvim-lsp	lazy-lock.json	/^  "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },$/;"	o
+cmp-path	lazy-lock.json	/^  "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },$/;"	o
+commit	lazy-lock.json	/^  "auto-save.nvim": { "branch": "main", "commit": "979b6c82f60cfa80f4cf437d77446d0ded0addf0" },$/;"	s	object:auto-save.nvim
+commit	lazy-lock.json	/^  "bufferline.nvim": { "branch": "main", "commit": "ef4fdc5cea3473801dce89b5fdfe633380c80c65" },$/;"	s	object:bufferline.nvim
+commit	lazy-lock.json	/^  "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },$/;"	s	object:cmp-buffer
+commit	lazy-lock.json	/^  "cmp-cmdline": { "branch": "main", "commit": "8ee981b4a91f536f52add291594e89fb6645e451" },$/;"	s	object:cmp-cmdline
+commit	lazy-lock.json	/^  "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },$/;"	s	object:cmp-nvim-lsp
+commit	lazy-lock.json	/^  "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },$/;"	s	object:cmp-path
+commit	lazy-lock.json	/^  "diffview.nvim": { "branch": "main", "commit": "9f00ed07c16662bd4280ecc4bfe7d35a65b1f6b7" },$/;"	s	object:diffview.nvim
+commit	lazy-lock.json	/^  "github-nvim-theme": { "branch": "main", "commit": "62b7b54a90c70c20cd1641f9facfced46bdd3561" /;"	s	object:github-nvim-theme
+commit	lazy-lock.json	/^  "gitsigns.nvim": { "branch": "main", "commit": "4455bb5364d29ff86639dfd5533d4fe4b48192d4" },$/;"	s	object:gitsigns.nvim
+commit	lazy-lock.json	/^  "indent-blankline.nvim": { "branch": "master", "commit": "7075d7861f7a6bbf0de0298c83f8a13195e6/;"	s	object:indent-blankline.nvim
+commit	lazy-lock.json	/^  "lazy.nvim": { "branch": "main", "commit": "d1b02c2dda88422ca573f2a1ebdfb213ce0124d6" },$/;"	s	object:lazy.nvim
+commit	lazy-lock.json	/^  "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },$/;"	s	object:lualine.nvim
+commit	lazy-lock.json	/^  "mason-lspconfig.nvim": { "branch": "main", "commit": "5230617372e656d4a2e1e236e03bf7e7b4b9727/;"	s	object:mason-lspconfig.nvim
+commit	lazy-lock.json	/^  "mason.nvim": { "branch": "main", "commit": "7d7efc738e08fc5bee822857db45cb6103f0b0c1" },$/;"	s	object:mason.nvim
+commit	lazy-lock.json	/^  "modes.nvim": { "branch": "main", "commit": "4d97a51ebbdb649b85f6d79da0009fddd7081a6b" },$/;"	s	object:modes.nvim
+commit	lazy-lock.json	/^  "neogit": { "branch": "master", "commit": "4cebc271b13cb7af6b5a3e8ad76a356660c0c00c" },$/;"	s	object:neogit
+commit	lazy-lock.json	/^  "null-ls.nvim": { "branch": "main", "commit": "a138b14099e9623832027ea12b4631ddd2a49256" },$/;"	s	object:null-ls.nvim
+commit	lazy-lock.json	/^  "nvim-autopairs": { "branch": "master", "commit": "59df87a84c80a357ca8d8fe86e451b93ac476ccc" }/;"	s	object:nvim-autopairs
+commit	lazy-lock.json	/^  "nvim-cmp": { "branch": "main", "commit": "b5a636d46c69bb371995c22d7a10ee1544004879" },$/;"	s	object:nvim-cmp
+commit	lazy-lock.json	/^  "nvim-lspconfig": { "branch": "master", "commit": "0f598b9ab9f2a6d7e137074be99c8d89af44b990" }/;"	s	object:nvim-lspconfig
+commit	lazy-lock.json	/^  "nvim-surround": { "branch": "main", "commit": "211eaad7c6d01ef4ac02cba9052b3082ec232101" },$/;"	s	object:nvim-surround
+commit	lazy-lock.json	/^  "nvim-tree.lua": { "branch": "master", "commit": "f5d970d4506f385b29534252d8c15a782fa53034" },$/;"	s	object:nvim-tree.lua
+commit	lazy-lock.json	/^  "nvim-treesitter": { "branch": "master", "commit": "2c59e0ff3da6514b03d853ebecb6c36c515a5d7d" /;"	s	object:nvim-treesitter
+commit	lazy-lock.json	/^  "nvim-web-devicons": { "branch": "master", "commit": "2a125024a137677930efcfdf720f205504c97268/;"	s	object:nvim-web-devicons
+commit	lazy-lock.json	/^  "plenary.nvim": { "branch": "master", "commit": "499e0743cf5e8075cd32af68baa3946a1c76adf1" },$/;"	s	object:plenary.nvim
+commit	lazy-lock.json	/^  "sqlite.lua": { "branch": "master", "commit": "b7e28c8463254c46a8e61c52d27d6a2040492fc3" },$/;"	s	object:sqlite.lua
+commit	lazy-lock.json	/^  "telescope-frecency.nvim": { "branch": "master", "commit": "0a4a521471141ae3c94ff0ebcffcaff3c3/;"	s	object:telescope-frecency.nvim
+commit	lazy-lock.json	/^  "telescope.nvim": { "branch": "master", "commit": "42267407ae588fd6c07238777d48869571193a49" }/;"	s	object:telescope.nvim
+commit	lazy-lock.json	/^  "toggleterm.nvim": { "branch": "main", "commit": "cf146a267a6a7db62b1e2aff40414b20081048a1" },$/;"	s	object:toggleterm.nvim
+commit	lazy-lock.json	/^  "tokyonight.nvim": { "branch": "main", "commit": "161114bd39b990995e08dbf941f6821afbdcd666" },$/;"	s	object:tokyonight.nvim
+commit	lazy-lock.json	/^  "trouble.nvim": { "branch": "main", "commit": "2af0dd9767526410c88c628f1cbfcb6cf22dd683" },$/;"	s	object:trouble.nvim
+commit	lazy-lock.json	/^  "vim-quickhl": { "branch": "master", "commit": "be1f44169c3fdee3beab629e83380515da03835e" }$/;"	s	object:vim-quickhl
+config	init.lua	/^      config = function()$/;"	f
+config	init.lua	/^     config = function()$/;"	f
+config	init.lua	/^    config = function()$/;"	f
+diffview.nvim	lazy-lock.json	/^  "diffview.nvim": { "branch": "main", "commit": "9f00ed07c16662bd4280ecc4bfe7d35a65b1f6b7" },$/;"	o
+expand	init.lua	/^    expand = function(args)$/;"	f
+github-nvim-theme	lazy-lock.json	/^  "github-nvim-theme": { "branch": "main", "commit": "62b7b54a90c70c20cd1641f9facfced46bdd3561" /;"	o
+gitsigns.nvim	lazy-lock.json	/^  "gitsigns.nvim": { "branch": "main", "commit": "4455bb5364d29ff86639dfd5533d4fe4b48192d4" },$/;"	o
+indent-blankline.nvim	lazy-lock.json	/^  "indent-blankline.nvim": { "branch": "master", "commit": "7075d7861f7a6bbf0de0298c83f8a13195e6/;"	o
+lazy.nvim	lazy-lock.json	/^  "lazy.nvim": { "branch": "main", "commit": "d1b02c2dda88422ca573f2a1ebdfb213ce0124d6" },$/;"	o
+lualine.nvim	lazy-lock.json	/^  "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },$/;"	o
+map	init.lua	/^            local function map(mode, lhs, rhs, opts)$/;"	f
+mason-lspconfig.nvim	lazy-lock.json	/^  "mason-lspconfig.nvim": { "branch": "main", "commit": "5230617372e656d4a2e1e236e03bf7e7b4b9727/;"	o
+mason.nvim	lazy-lock.json	/^  "mason.nvim": { "branch": "main", "commit": "7d7efc738e08fc5bee822857db45cb6103f0b0c1" },$/;"	o
+modes.nvim	lazy-lock.json	/^  "modes.nvim": { "branch": "main", "commit": "4d97a51ebbdb649b85f6d79da0009fddd7081a6b" },$/;"	o
+neogit	lazy-lock.json	/^  "neogit": { "branch": "master", "commit": "4cebc271b13cb7af6b5a3e8ad76a356660c0c00c" },$/;"	o
+null-ls.nvim	lazy-lock.json	/^  "null-ls.nvim": { "branch": "main", "commit": "a138b14099e9623832027ea12b4631ddd2a49256" },$/;"	o
+nvim-autopairs	lazy-lock.json	/^  "nvim-autopairs": { "branch": "master", "commit": "59df87a84c80a357ca8d8fe86e451b93ac476ccc" }/;"	o
+nvim-cmp	lazy-lock.json	/^  "nvim-cmp": { "branch": "main", "commit": "b5a636d46c69bb371995c22d7a10ee1544004879" },$/;"	o
+nvim-lspconfig	lazy-lock.json	/^  "nvim-lspconfig": { "branch": "master", "commit": "0f598b9ab9f2a6d7e137074be99c8d89af44b990" }/;"	o
+nvim-surround	lazy-lock.json	/^  "nvim-surround": { "branch": "main", "commit": "211eaad7c6d01ef4ac02cba9052b3082ec232101" },$/;"	o
+nvim-tree.lua	lazy-lock.json	/^  "nvim-tree.lua": { "branch": "master", "commit": "f5d970d4506f385b29534252d8c15a782fa53034" },$/;"	o
+nvim-treesitter	lazy-lock.json	/^  "nvim-treesitter": { "branch": "master", "commit": "2c59e0ff3da6514b03d853ebecb6c36c515a5d7d" /;"	o
+nvim-web-devicons	lazy-lock.json	/^  "nvim-web-devicons": { "branch": "master", "commit": "2a125024a137677930efcfdf720f205504c97268/;"	o
+on_attach	init.lua	/^          on_attach = function(bufnr)$/;"	f
+opts.on_attach	init.lua	/^    opts.on_attach = function(_, bufnr)$/;"	f
+plenary.nvim	lazy-lock.json	/^  "plenary.nvim": { "branch": "master", "commit": "499e0743cf5e8075cd32af68baa3946a1c76adf1" },$/;"	o
+size	init.lua	/^         size = function(term)$/;"	f
+sqlite.lua	lazy-lock.json	/^  "sqlite.lua": { "branch": "master", "commit": "b7e28c8463254c46a8e61c52d27d6a2040492fc3" },$/;"	o
+telescope-frecency.nvim	lazy-lock.json	/^  "telescope-frecency.nvim": { "branch": "master", "commit": "0a4a521471141ae3c94ff0ebcffcaff3c3/;"	o
+telescope.nvim	lazy-lock.json	/^  "telescope.nvim": { "branch": "master", "commit": "42267407ae588fd6c07238777d48869571193a49" }/;"	o
+toggleterm.nvim	lazy-lock.json	/^  "toggleterm.nvim": { "branch": "main", "commit": "cf146a267a6a7db62b1e2aff40414b20081048a1" },$/;"	o
+tokyonight.nvim	lazy-lock.json	/^  "tokyonight.nvim": { "branch": "main", "commit": "161114bd39b990995e08dbf941f6821afbdcd666" },$/;"	o
+trouble.nvim	lazy-lock.json	/^  "trouble.nvim": { "branch": "main", "commit": "2af0dd9767526410c88c628f1cbfcb6cf22dd683" },$/;"	o
+vim-quickhl	lazy-lock.json	/^  "vim-quickhl": { "branch": "master", "commit": "be1f44169c3fdee3beab629e83380515da03835e" }$/;"	o
