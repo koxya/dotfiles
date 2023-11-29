@@ -40,6 +40,13 @@ export PATH=$PATH:$HOME/.deno/bin:$PATH
 export VOLTA_HOME=$HOME/.volta
 export PATH=$VOLTA_HOME/bin:$PATH
 
+# bun completions
+[ -s "/root/.bun/_bun" ] && source "/root/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # TiDB
 export PATH=/root/.tiup/bin:$PATH
 
