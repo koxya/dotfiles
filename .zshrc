@@ -16,7 +16,7 @@ alias vi='vim'
 alias kubectl='minikube kubectl --'
 
 # ls拡張
-alias la='ls -a --color=auto'
+alias la='ls -la --color=auto'
 alias ll='ls -lht --color=auto'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -93,6 +93,8 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 # 予測補完
 zinit light zsh-users/zsh-autosuggestions
+# 256カラー使用
+zinit light chrissicool/zsh-256color
 
 function fzf-cdr() {
     local target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf --query "$LBUFFER"`
