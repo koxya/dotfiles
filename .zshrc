@@ -166,13 +166,3 @@ setopt share_history          # 全てのセッションで履歴を共有する
 # awscli s3 lsをpecoに渡す
 zinit light koya-masuda/peco-s3arch
 
-function gitmain() {
-  git config --global user.name "Koya Masuda"
-  git config --global user.email "koya.masuda@rooter.co.jp"
-}
-
-function gitsub() {
-  git config --global user.name "koya-masuda"
-  git config --global user.email "masuda.58.koya@gmail.com"
-}
-
