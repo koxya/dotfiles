@@ -27,6 +27,11 @@ vim.opt.title = true
 vim.opt.showcmd = true
 vim.opt.sidescroll = 5
 vim.opt.swapfile = false
+vim.opt.ttimeout = true
+vim.o.ttimeoutlen = 50
+
+-- search
+vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohl<CR>', { noremap = true, silent = true})
 
 -- Always display the status line at the bottom of the window
 vim.opt.laststatus = 3
@@ -35,8 +40,8 @@ vim.opt.laststatus = 3
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
 vim.keymap.set('t', 'jk', [[<C-\><C-n>]])
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
-vim.keymap.set('n', 'j', 'gj')
-vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('n', 'j', 'gj', { silent = true })
+vim.keymap.set('n', 'k', 'gk', { silent = true })
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 's', '"_s')
 

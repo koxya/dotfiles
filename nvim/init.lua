@@ -14,16 +14,37 @@ if not vim.g.vscode then
   end
   vim.opt.rtp:prepend(lazypath)
   require('lazy').setup({
-    { -- many plugins dependent on this
-      'nvim-lua/plenary.nvim'
-    },
     {
       'folke/tokyonight.nvim',
       config = function()
         vim.cmd[[colorscheme tokyonight]]
       end,
     },
+    { -- many plugins dependent on this
+      'nvim-lua/plenary.nvim'
+    },
+    { 'pocco81/auto-save.nvim' },
     { 'nvim-tree/nvim-web-devicons' },
+    {
+      'nvim-tree/nvim-tree.lua',
+      keys = {
+        { '<C-b>', '<cmd>NvimTreeToggle<CR>' },
+      },
+      config = function()
+        require('nvim-tree').setup{}
+      end
+    },
+    {
+      'akinsho/bufferline.nvim',
+      keys = {
+        { '<Tab>', '<cmd>BufferLineCycleNext<cr>', mode = 'n' },
+      },
+      tag = 'v4.*',
+      event = 'BufEnter',
+      config = function()
+        require('bufferline').setup{}
+      end,
+    },
     {
       'nvim-treesitter/nvim-treesitter',
       config = function()
@@ -40,15 +61,6 @@ if not vim.g.vscode then
     },
     {
       'simeji/winresizer',
-    },
-    {
-      'nvim-tree/nvim-tree.lua',
-      keys = {
-        { '<C-b>', '<cmd>NvimTreeToggle<CR>' },
-      },
-      config = function()
-        require('nvim-tree').setup{}
-      end
     },
     {
       -- status line
@@ -77,18 +89,6 @@ if not vim.g.vscode then
         })
       end
     },
-    { 'pocco81/auto-save.nvim' },
-    {
-      'akinsho/bufferline.nvim',
-      keys = {
-        { '<Tab>', '<cmd>BufferLineCycleNext<cr>', mode = 'n' },
-      },
-      tag = 'v4.*',
-      event = 'BufEnter',
-      config = function()
-        require('bufferline').setup{}
-      end,
-    },
     {
       -- fuzzy finder
       'nvim-telescope/telescope.nvim',
@@ -97,11 +97,12 @@ if not vim.g.vscode then
         { '<C-g>', '<cmd>Telescope live_grep<cr>' },
         { '<C-f>', '<cmd>Telescope current_buffer_fuzzy_find<cr>' },
         { '<C-h>', '<cmd>Telescope command_history<cr>' },
+        { ';;', '<cmd>Telescope resume<cr>' },
       },
       extensions = {
         fzf = {
           fuzzy = true,        -- false will only do exact matching
-          override_generic_sorter = false, -- override the generic sorter
+          override_generic_sorter = true, -- override the generic sorter
           override_file_sorter = true,     -- override the file sorter
           case_mode = 'smart_case',  -- or 'ignore_case' or 'respect_case'
           -- the default case_mode is 'smart_case'
@@ -111,6 +112,10 @@ if not vim.g.vscode then
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
       end,
+    },
+    {
+       'nvim-telescope/telescope-fzf-native.nvim',
+       build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
     },
     {
        'nvim-telescope/telescope-frecency.nvim',
@@ -243,6 +248,7 @@ if not vim.g.vscode then
     }
   })
 
+  require('telescope').load_extension('fzf')
   local nvim_lsp = require('lspconfig')
   local mason_lspconfig = require('mason-lspconfig')
   mason_lspconfig.setup_handlers({
@@ -296,18 +302,19 @@ if not vim.g.vscode then
       end, { desc = 'Format current buffer with LSP' })
     end
     local servers = {
-      solargraph = {
+      ruby_ls = {
         filetypes = { 'ruby' },
       },
       gopls = {
         filetypes = { 'go' }
+      },
+      tsserver = {
+        filetypes = { 'ts', 'tsx' }
       }
     }
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
-    local mason_lspconfig = require 'mason-lspconfig'
 
     mason_lspconfig.setup {
       ensure_installed = vim.tbl_keys(servers),

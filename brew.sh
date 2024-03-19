@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 commands=(
+    zsh
     awscli
     awslogs
     curl
@@ -13,6 +14,7 @@ commands=(
     tree
     volta
     watch
+    bat
 )
 
 for commands in "${commands[@]}" ; do
