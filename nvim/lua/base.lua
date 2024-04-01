@@ -44,6 +44,8 @@ vim.keymap.set('n', 'j', 'gj', { silent = true })
 vim.keymap.set('n', 'k', 'gk', { silent = true })
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 's', '"_s')
+vim.keymap.set('n', 'qq', ':nohlsearch<CR>')
+vim.keymap.set('n', 'mm', '*')
 
 -- clipboard
 vim.opt.clipboard = 'unnamedplus'
