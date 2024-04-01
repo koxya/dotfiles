@@ -28,10 +28,14 @@ vim.opt.showcmd = true
 vim.opt.sidescroll = 5
 vim.opt.swapfile = false
 vim.opt.ttimeout = true
-vim.o.ttimeoutlen = 50
+vim.opt.ttimeoutlen = 50
+vim.opt.wrap = false
 
 -- search
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohl<CR>', { noremap = true, silent = true})
+
+-- column
+vim.api.nvim_win_set_option(0, 'signcolumn', 'yes:1')
 
 -- Always display the status line at the bottom of the window
 vim.opt.laststatus = 3
