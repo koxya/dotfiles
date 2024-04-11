@@ -4,7 +4,12 @@ local plugins = {
   {
     'folke/tokyonight.nvim',
     config = function()
-      vim.cmd[[colorscheme tokyonight]]
+      require("tokyonight").setup({
+        on_colors = function(colors)
+          colors.border = "orange"
+        end
+      })
+      vim.cmd[[colorscheme tokyonight-night]]
     end,
   },
   { -- many plugins dependent on this
