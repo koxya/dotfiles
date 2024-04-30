@@ -1,6 +1,57 @@
 require('base')
 
-local plugins = {
+local common_plugins = {
+        {
+                'kevinhwang91/nvim-hlslens',
+        },
+        {
+                'yutkat/wb-only-current-line.nvim',
+        },
+        { -- many plugins dependent on this
+                'nvim-lua/plenary.nvim'
+        },
+        {
+                'pocco81/auto-save.nvim'
+        },
+        {
+                'simeji/winresizer',
+        },
+        {
+                'mvllow/modes.nvim',
+                event = BufEnter,
+                config = function()
+                        require('modes').setup()
+                end
+        },
+        {
+                'windwp/nvim-autopairs',
+                event = 'InsertEnter',
+        },
+        {
+                'kylechui/nvim-surround',
+                version = '*', -- Use for stability; omit to use `main` branch for the latest features
+                event = 'VeryLazy',
+                config = function()
+                        require('nvim-surround').setup({
+                                -- Configuration here, or leave empty to use defaults
+                        })
+                end
+        },
+        {
+                -- status line
+                'nvim-lualine/lualine.nvim',
+                config = function()
+                        require('lualine').setup({
+                                options = {
+                                        theme = 'tokyonight',
+                                        globalstatus = true,
+                                }
+                        })
+                end
+        },
+}
+
+local neovim_plugins = {
         {
                 'folke/tokyonight.nvim',
                 config = function()
@@ -12,11 +63,9 @@ local plugins = {
                         vim.cmd [[colorscheme tokyonight-night]]
                 end,
         },
-        { -- many plugins dependent on this
-                'nvim-lua/plenary.nvim'
+        {
+                'nvim-tree/nvim-web-devicons'
         },
-        { 'pocco81/auto-save.nvim' },
-        { 'nvim-tree/nvim-web-devicons' },
         {
                 'nvim-tree/nvim-tree.lua',
                 keys = {
@@ -26,17 +75,6 @@ local plugins = {
                 config = function()
                         require('nvim-tree').setup {}
                 end
-        },
-        {
-                'akinsho/bufferline.nvim',
-                keys = {
-                        { '<Tab>', '<cmd>BufferLineCycleNext<cr>', mode = 'n' },
-                },
-                version = "*",
-                event = 'BufEnter',
-                config = function()
-                        require('bufferline').setup {}
-                end,
         },
         {
                 'nvim-treesitter/nvim-treesitter',
@@ -53,38 +91,15 @@ local plugins = {
                 end
         },
         {
-                'simeji/winresizer',
-        },
-        {
-                'RRethy/vim-illuminate',
-        },
-        {
-                -- status line
-                'nvim-lualine/lualine.nvim',
+                'akinsho/bufferline.nvim',
+                keys = {
+                        { '<Tab>', '<cmd>BufferLineCycleNext<cr>', mode = 'n' },
+                },
+                version = "*",
+                event = 'BufEnter',
                 config = function()
-                        require('lualine').setup({
-                                options = {
-                                        theme = 'tokyonight',
-                                        globalstatus = true,
-                                }
-                        })
-                end
-        },
-        {
-                'windwp/nvim-autopairs',
-                config = function()
-                        require('nvim-autopairs').setup {}
+                        require('bufferline').setup {}
                 end,
-        },
-        {
-                'kylechui/nvim-surround',
-                version = '*', -- Use for stability; omit to use `main` branch for the latest features
-                event = 'VeryLazy',
-                config = function()
-                        require('nvim-surround').setup({
-                                -- Configuration here, or leave empty to use defaults
-                        })
-                end
         },
         {
                 -- fuzzy finder
@@ -128,29 +143,6 @@ local plugins = {
                 end,
         },
         {
-                'akinsho/toggleterm.nvim',
-                keys = {
-                        { 'tt', '<cmd>ToggleTerm direction=tab<cr>' },
-                        { 'th', '<cmd>ToggleTerm direction=horizontal<cr>' },
-                        { 'tv', '<cmd>ToggleTerm direction=vertical<cr>' },
-                        { 'tf', '<cmd>ToggleTerm direction=float<cr>' },
-                },
-                config = function()
-                        require('toggleterm').setup({
-                                size = function(term)
-                                        if term.direction == 'horizontal' then
-                                                return 15
-                                        elseif term.direction == 'vertical' then
-                                                return vim.o.columns * 0.4
-                                        end
-                                end,
-                                float_opts = {
-                                        border = 'curved',
-                                }
-                        })
-                end
-        },
-        {
                 'neovim/nvim-lspconfig',
         },
         {
@@ -177,7 +169,27 @@ local plugins = {
                 'petertriho/nvim-scrollbar',
         },
         {
-                'kevinhwang91/nvim-hlslens',
+                'akinsho/toggleterm.nvim',
+                keys = {
+                        { 'tt', '<cmd>ToggleTerm direction=tab<cr>' },
+                        { 'th', '<cmd>ToggleTerm direction=horizontal<cr>' },
+                        { 'tv', '<cmd>ToggleTerm direction=vertical<cr>' },
+                        { 'tf', '<cmd>ToggleTerm direction=float<cr>' },
+                },
+                config = function()
+                        require('toggleterm').setup({
+                                size = function(term)
+                                        if term.direction == 'horizontal' then
+                                                return 15
+                                        elseif term.direction == 'vertical' then
+                                                return vim.o.columns * 0.4
+                                        end
+                                end,
+                                float_opts = {
+                                        border = 'curved',
+                                }
+                        })
+                end
         },
         {
                 'lewis6991/gitsigns.nvim',
@@ -242,11 +254,13 @@ local plugins = {
                 end
         },
         {
-                'mvllow/modes.nvim',
-                event = BufEnter,
+                'jose-elias-alvarez/null-ls.nvim',
                 config = function()
-                        require('modes').setup()
+                        require('null-ls').setup()
                 end
+        },
+        {
+                'RRethy/vim-illuminate',
         },
         {
                 'folke/trouble.nvim',
@@ -262,17 +276,24 @@ local plugins = {
                         '<leader>xr', '<cmd>TroubleToggle lsp_references<cr>',
                 }
         },
-        {
-                'jose-elias-alvarez/null-ls.nvim',
-                config = function()
-                        require('null-ls').setup()
-                end
-        },
-        {
-                'yutkat/wb-only-current-line.nvim',
-        },
         { 'github/copilot.vim' },
+
 }
+
+local vscode_plugins = {
+
+}
+
+local function merge_tables(t1, t2)
+    local merged = {}
+    for _, v in ipairs(t1) do
+        table.insert(merged, v)
+    end
+    for _, v in ipairs(t2) do
+        table.insert(merged, v)
+    end
+    return merged
+end
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -286,7 +307,11 @@ if not vim.loop.fs_stat(lazypath) then
         })
 end
 vim.opt.rtp:prepend(lazypath)
-require('lazy').setup(plugins)
+
+local is_vscode = vim.g.vscode == 1
+require('lazy').setup(
+        merge_tables(common_plugins, is_vscode and vscode_plugins or neovim_plugins)
+)
 
 require('telescope').load_extension('fzf')
 require('lsp')
