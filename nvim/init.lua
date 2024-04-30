@@ -37,18 +37,6 @@ local common_plugins = {
                         })
                 end
         },
-        {
-                -- status line
-                'nvim-lualine/lualine.nvim',
-                config = function()
-                        require('lualine').setup({
-                                options = {
-                                        theme = 'tokyonight',
-                                        globalstatus = true,
-                                }
-                        })
-                end
-        },
 }
 
 local neovim_plugins = {
@@ -65,6 +53,18 @@ local neovim_plugins = {
         },
         {
                 'nvim-tree/nvim-web-devicons'
+        },
+        {
+                -- status line
+                'nvim-lualine/lualine.nvim',
+                config = function()
+                        require('lualine').setup({
+                                options = {
+                                        theme = 'tokyonight',
+                                        globalstatus = true,
+                                }
+                        })
+                end
         },
         {
                 'nvim-tree/nvim-tree.lua',
