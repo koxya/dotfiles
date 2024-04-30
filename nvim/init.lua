@@ -313,5 +313,7 @@ require('lazy').setup(
         merge_tables(common_plugins, is_vscode and vscode_plugins or neovim_plugins)
 )
 
-require('telescope').load_extension('fzf')
-require('lsp')
+if not is_vscode then
+        require('telescope').load_extension('fzf')
+        require('lsp')
+end
