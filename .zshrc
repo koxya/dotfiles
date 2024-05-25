@@ -1,21 +1,32 @@
 # fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
+FZF_CTRL_R_OPTS= source <(fzf --zsh)
+FZF_ALT_C_COMMAND= source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND="rg --files --follow --no-ignore-vcs --hidden -g '!{**/node_modules/*,**/.git/*}'"
 export FZF_DEFAULT_OPTS="--no-height --reverse --border"
-
-# Preview file content using bat (https://github.com/sharkdp/bat)
-export FZF_CTRL_T_OPTS="
-  --preview 'bat -n --color=always {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-
-# CTRL-Y to copy the command into clipboard using clip.exe
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
 export FZF_CTRL_R_OPTS="
-  --exact
   --preview 'echo {}' --preview-window up:3:hidden:wrap
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | iconv -f UTF-8 -t CP932 | clip.exe)+abort'"
-
+  --bind '?:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --header 'Press CTRL-Y to copy command into clipboard'"
 # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
+function fzf-cdr() {
+    local target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf --query "$LBUFFER"`
+    if [ -n "$target_dir" ]; then
+        BUFFER="cd ${target_dir}"
+        zle accept-line
+    fi
+}
+zle -N fzf-cdr
+bindkey "^]" fzf-cdr
+
+setopt hist_expire_dups_first # 履歴を切り詰める際に、重複する最も古いイベントから消す
+setopt hist_ignore_all_dups   # 履歴が重複した場合に古い履歴を削除する
+setopt share_history          # 全てのセッションで履歴を共有する
 
 # copy and paste
 # alias clip='iconv -f UTF-8 -t CP932 | clip.exe'
@@ -112,20 +123,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 # 256カラー使用
 zinit light chrissicool/zsh-256color
-
-function fzf-cdr() {
-    local target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf --query "$LBUFFER"`
-    if [ -n "$target_dir" ]; then
-        BUFFER="cd ${target_dir}"
-        zle accept-line
-    fi
-}
-zle -N fzf-cdr
-bindkey "^]" fzf-cdr
-
-setopt hist_expire_dups_first # 履歴を切り詰める際に、重複する最も古いイベントから消す
-setopt hist_ignore_all_dups   # 履歴が重複した場合に古い履歴を削除する
-setopt share_history          # 全てのセッションで履歴を共有する
 
 # awscli s3 lsをpecoに渡す
 zinit light koya-masuda/peco-s3arch
