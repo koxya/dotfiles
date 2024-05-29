@@ -69,8 +69,8 @@ local neovim_plugins = {
         {
                 'nvim-tree/nvim-tree.lua',
                 keys = {
-                        { 'tb', '<cmd>NvimTreeToggle<CR>' },
-                        { 'cb', '<cmd>NvimTreeFindFile<CR>' },
+                        { '<leader>b', '<cmd>NvimTreeToggle<CR>' },
+                        { '<leader>c', '<cmd>NvimTreeFindFile<CR>' },
                 },
                 config = function()
                         require('nvim-tree').setup {}
@@ -268,12 +268,12 @@ local neovim_plugins = {
                         require('trouble').setup()
                 end,
                 keys = {
-                        '<leader>xx', '<cmd>TroubleToggle<cr>',
-                        '<leader>xw', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
-                        '<leader>xd', '<cmd>TroubleToggle lsp_document_diagnostics<cr>',
-                        '<leader>xq', '<cmd>TroubleToggle quickfix<cr>',
-                        '<leader>xl', '<cmd>TroubleToggle loclist<cr>',
-                        '<leader>xr', '<cmd>TroubleToggle lsp_references<cr>',
+                        '<leader>fx', '<cmd>TroubleToggle<cr>',
+                        '<leader>fw', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
+                        '<leader>fd', '<cmd>TroubleToggle lsp_document_diagnostics<cr>',
+                        '<leader>fq', '<cmd>TroubleToggle quickfix<cr>',
+                        '<leader>fl', '<cmd>TroubleToggle loclist<cr>',
+                        '<leader>fr', '<cmd>TroubleToggle lsp_references<cr>',
                 }
         },
         { 'github/copilot.vim' },
