@@ -18,7 +18,7 @@ local common_plugins = {
         },
         {
                 'mvllow/modes.nvim',
-                event = BufEnter,
+                event = "BufEnter",
                 config = function()
                         require('modes').setup()
                 end
