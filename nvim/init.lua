@@ -195,6 +195,14 @@ local neovim_plugins = {
                 'lewis6991/gitsigns.nvim',
                 config = function()
                         require('gitsigns').setup({
+                                current_line_blame = true,
+                                current_line_blame_opts = {
+                                  virt_text = true,
+                                  virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+                                  delay = 100,
+                                  ignore_whitespace = false,
+                                  virt_text_priority = 100,
+                                },
                                 on_attach = function(bufnr)
                                         local function map(mode, lhs, rhs, opts)
                                                 opts = vim.tbl_extend('force', { noremap = true, silent = true },
