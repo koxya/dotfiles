@@ -17,8 +17,12 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # for powershell
 # export PATH=$PATH:/mnt/c/Windows/System32/WindowsPowerShell/v1.0
 
-# mysql5.7 client
-export PATH="/opt/homebrew/opt/mysql-client@5.7/bin:$PATH"
+# mysql8.0 client
+export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
+
+# For compilers to find mysql-client@8.0 you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client@8.0/include"
 
 # rbenv
 export PATH="$HOME/.rbenv/shims:$PATH"
