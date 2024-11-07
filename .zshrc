@@ -82,8 +82,8 @@ alias grh='git reset --hard'
 # docker
 alias d='docker'
 alias de'docker exec'
-alias dc='docker-compose'
-alias dcud='docker-compose up -d'
+alias dc='docker compose'
+alias dcud='docker compose up -d'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
