@@ -37,11 +37,8 @@ alias bruby='bundle exec ruby'
 alias brails='bundle exec rails'
 alias brake='bundle exec rake'
 alias brspec='bundle exec rspec'
-alias b='bundle install'
 alias bexec='bundle exec'
 alias grun='go run'
-alias vim='nvim'
-alias vi='nvim'
 
 # ls拡張
 alias la='ls -la --color=auto'
@@ -58,12 +55,15 @@ add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 500
 zstyle ':chpwd:*' recent-dirs-default yes
 
+# brew universal ctags
+alias ctags="`brew --prefix`/bin/ctags"
+
 # git alias
 alias g='git'
 alias gs='git switch'
 alias gsm='git switch master'
 alias gsc='git switch -c'
-alias gc='git commit'
+alias gc='git commit -v'
 alias gpush='git push origin HEAD'
 alias gp='git pull'
 alias gpull='git pull origin master'
