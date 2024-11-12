@@ -29,7 +29,6 @@ casks=(
     karabiner-elements
     raycast
     visual-studio-code
-    warp
     wezterm
 )
 for casks in "${casks[@]}" ; do
