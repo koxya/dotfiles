@@ -276,12 +276,12 @@ local neovim_plugins = {
                         require('trouble').setup()
                 end,
                 keys = {
-                        '<leader>fx', '<cmd>TroubleToggle<cr>',
-                        '<leader>fw', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
-                        '<leader>fd', '<cmd>TroubleToggle lsp_document_diagnostics<cr>',
-                        '<leader>fq', '<cmd>TroubleToggle quickfix<cr>',
-                        '<leader>fl', '<cmd>TroubleToggle loclist<cr>',
-                        '<leader>fr', '<cmd>TroubleToggle lsp_references<cr>',
+                        '<leader>x', '<cmd>TroubleToggle<cr>',
+                        '<leader>w', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
+                        '<leader>d', '<cmd>TroubleToggle lsp_document_diagnostics<cr>',
+                        '<leader>q', '<cmd>TroubleToggle quickfix<cr>',
+                        '<leader>l', '<cmd>TroubleToggle loclist<cr>',
+                        '<leader>r', '<cmd>TroubleToggle lsp_references<cr>',
                 }
         },
         { 'github/copilot.vim' },
