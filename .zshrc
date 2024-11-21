@@ -122,8 +122,9 @@ zinit wait lucid light-mode for \
     chrissicool/zsh-256color \
     koya-masuda/peco-s3arch
 
-zinit light chrissicool/zsh-256color
+zshaddhistory() {
+    local line="${1%%$'\n'}"
+    [[ ! "$line" =~ "^(cd|jj?|lazygit|la|ll|ls|rm|rmdir)($| )" ]]
+}
 
-# awscli s3 lsをpecoに渡す
-zinit light koya-masuda/peco-s3arch
 
