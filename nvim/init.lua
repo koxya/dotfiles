@@ -2,16 +2,10 @@ require('base')
 
 local common_plugins = {
         {
-                'kevinhwang91/nvim-hlslens',
-        },
-        {
                 'yutkat/wb-only-current-line.nvim',
         },
         { -- many plugins dependent on this
                 'nvim-lua/plenary.nvim'
-        },
-        {
-                'pocco81/auto-save.nvim'
         },
         {
                 'simeji/winresizer',
@@ -52,6 +46,12 @@ local neovim_plugins = {
                 end,
         },
         {
+               'pocco81/auto-save.nvim'
+        },
+        {
+                'kevinhwang91/nvim-hlslens',
+        },
+        {
                 'nvim-tree/nvim-web-devicons'
         },
         {
@@ -64,7 +64,7 @@ local neovim_plugins = {
                                         globalstatus = true,
                                 }
                         })
-                end
+                end,
         },
         {
                 'nvim-tree/nvim-tree.lua',
