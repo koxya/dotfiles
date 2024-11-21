@@ -78,7 +78,6 @@ alias gl='git log --graph --oneline'
 alias gg='git graph'
 alias gb='git branch'
 alias gr='git reset'
-alias grh='git reset --hard'
 
 # docker
 alias d='docker'
