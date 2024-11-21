@@ -115,13 +115,13 @@ zinit light sindresorhus/pure
 zstyle :prompt:pure:path color green
 zstyle :prompt:pure:git:branch color red
 
-# シェルでシンタックスハイライトを効かせる
-zinit light zdharma-continuum/fast-syntax-highlighting
-# コマンド補完拡張
-zinit light zsh-users/zsh-completions
-# 予測補完
-zinit light zsh-users/zsh-autosuggestions
-# 256カラー使用
+zinit wait lucid light-mode for \
+    zdharma-continuum/fast-syntax-highlighting \
+    zsh-users/zsh-completions \
+    zsh-users/zsh-autosuggestions \
+    chrissicool/zsh-256color \
+    koya-masuda/peco-s3arch
+
 zinit light chrissicool/zsh-256color
 
 # awscli s3 lsをpecoに渡す
