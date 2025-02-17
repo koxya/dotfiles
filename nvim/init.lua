@@ -46,7 +46,7 @@ local neovim_plugins = {
                 end,
         },
         {
-               'pocco81/auto-save.nvim'
+                'pocco81/auto-save.nvim'
         },
         {
                 'kevinhwang91/nvim-hlslens',
@@ -114,10 +114,10 @@ local neovim_plugins = {
                 },
                 extensions = {
                         fzf = {
-                                fuzzy = true, -- false will only do exact matching
+                                fuzzy = true,                   -- false will only do exact matching
                                 override_generic_sorter = true, -- override the generic sorter
-                                override_file_sorter = true, -- override the file sorter
-                                case_mode = 'smart_case', -- or 'ignore_case' or 'respect_case'
+                                override_file_sorter = true,    -- override the file sorter
+                                case_mode = 'smart_case',       -- or 'ignore_case' or 'respect_case'
                                 -- the default case_mode is 'smart_case'
                         }
                 },
@@ -197,11 +197,11 @@ local neovim_plugins = {
                         require('gitsigns').setup({
                                 current_line_blame = true,
                                 current_line_blame_opts = {
-                                  virt_text = true,
-                                  virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
-                                  delay = 100,
-                                  ignore_whitespace = false,
-                                  virt_text_priority = 100,
+                                        virt_text = true,
+                                        virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+                                        delay = 100,
+                                        ignore_whitespace = false,
+                                        virt_text_priority = 100,
                                 },
                                 on_attach = function(bufnr)
                                         local function map(mode, lhs, rhs, opts)
@@ -231,10 +231,11 @@ local neovim_plugins = {
                                 end
                         })
                         require("scrollbar.handlers.gitsigns").setup()
-                        require("scrollbar.handlers.search").setup({
-                                -- hlslens config overrides
-                        })
+                        -- require("scrollbar.handlers.search").setup({
+                        --         -- hlslens config overrides
+                        -- })
                 end,
+                dependencies = { 'petertriho/nvim-scrollbar' },
         },
         {
                 'sindrets/diffview.nvim',
@@ -285,28 +286,29 @@ local neovim_plugins = {
                 }
         },
         { 'github/copilot.vim' },
-        { 'lukas-reineke/indent-blankline.nvim',
+        {
+                'lukas-reineke/indent-blankline.nvim',
                 config = function()
                         local highlight = {
-                            "RainbowRed",
-                            "RainbowYellow",
-                            "RainbowBlue",
-                            "RainbowOrange",
-                            "RainbowGreen",
-                            "RainbowViolet",
-                            "RainbowCyan",
+                                "RainbowRed",
+                                "RainbowYellow",
+                                "RainbowBlue",
+                                "RainbowOrange",
+                                "RainbowGreen",
+                                "RainbowViolet",
+                                "RainbowCyan",
                         }
                         local hooks = require "ibl.hooks"
                         -- create the highlight groups in the highlight setup hook, so they are reset
                         -- every time the colorscheme changes
                         hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-                            vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-                            vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-                            vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-                            vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-                            vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-                            vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
-                            vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+                                vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+                                vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+                                vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+                                vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+                                vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+                                vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+                                vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
                         end)
 
                         vim.g.rainbow_delimiters = { highlight = highlight }
@@ -324,14 +326,14 @@ local vscode_plugins = {
 }
 
 local function merge_tables(t1, t2)
-    local merged = {}
-    for _, v in ipairs(t1) do
-        table.insert(merged, v)
-    end
-    for _, v in ipairs(t2) do
-        table.insert(merged, v)
-    end
-    return merged
+        local merged = {}
+        for _, v in ipairs(t1) do
+                table.insert(merged, v)
+        end
+        for _, v in ipairs(t2) do
+                table.insert(merged, v)
+        end
+        return merged
 end
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
