@@ -122,6 +122,8 @@ zinit wait lucid light-mode for \
     chrissicool/zsh-256color \
     koya-masuda/peco-s3arch
 
+zinit light olets/zsh-abbr
+
 zshaddhistory() {
     local line="${1%%$'\n'}"
     [[ ! "$line" =~ "^(cd|jj?|lazygit|la|ll|ls|rm|rmdir)($| )" ]]
