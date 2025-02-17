@@ -59,32 +59,6 @@ zstyle ':chpwd:*' recent-dirs-default yes
 # brew universal ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
-# git alias
-alias g='git'
-alias gs='git switch'
-alias gsm='git switch master'
-alias gsc='git switch -c'
-alias gc='git commit -v'
-alias gpush='git push origin HEAD'
-alias gp='git pull'
-alias gpull='git pull origin master'
-alias gst='git status'
-alias gsth='git stash'
-alias ga='git add'
-alias gmm='git merge master'
-alias gm='git merge'
-alias gd='git diff ^HEAD'
-alias gl='git log --graph --oneline'
-alias gg='git graph'
-alias gb='git branch'
-alias gr='git reset'
-
-# docker
-alias d='docker'
-alias de'docker exec'
-alias dc='docker compose'
-alias dcud='docker compose up -d'
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
