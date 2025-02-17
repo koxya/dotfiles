@@ -103,4 +103,10 @@ zshaddhistory() {
     [[ ! "$line" =~ "^(cd|jj?|lazygit|la|ll|ls|rm|rmdir)($| )" ]]
 }
 
+# bun completions
+[ -s "/Users/koyamasuda/.bun/_bun" ] && source "/Users/koyamasuda/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
