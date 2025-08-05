@@ -41,11 +41,15 @@ alias brspec='bundle exec rspec'
 alias bexec='bundle exec'
 alias grun='go run'
 
+alias gss='git branch --list | cut -c 3- | fzf | xargs git switch'
+
 # ls拡張
 alias la='ls -la --color=auto'
 alias ll='ls -lht --color=auto'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias ..='cd ../'
+alias ...='cd ../../'
 
 # parallel-ssh
 alias pssh='parallel-ssh'
