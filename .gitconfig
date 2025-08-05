@@ -1,0 +1,16 @@
+[user]
+	name = Koya Masuda
+	email = 71430401+koya-masuda@users.noreply.github.com
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	c = commit
+[url "ssh://git@github.com"]
+	insteadOf = https://github.com
+[push]
+	autoSetupRemote = true
+[core]
+	autocrlf = input
+	editor = nvim
+
