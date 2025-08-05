@@ -18,6 +18,9 @@ config.color_scheme = 'Tokyo Night'
 config.font = wezterm.font("Hack Nerd Font Mono")
 config.font_size = 16
 
+-- scroll backline
+config.scrollback_lines = 50000
+
 -- Show which key table is active in the status area
 wezterm.on('update-right-status', function(window, pane)
   local name = window:active_key_table()
@@ -29,6 +32,14 @@ end)
 
 config.leader = { key = 'Space', mods = 'CTRL|SHIFT' }
 config.keys = {
+  {
+    key = 's',
+    mods = 'LEADER',
+    action = act.ShowLauncherArgs {
+            flags = 'WORKSPACES' , title = "Select workspace"
+    },
+  },
+
   -- CTRL+SHIFT+Space, followed by 'r' will put us in resize-pane
   -- mode until we cancel that mode.
   {
