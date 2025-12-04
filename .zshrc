@@ -1,3 +1,6 @@
+# gpg
+export GPG_TTY=$TTY
+
 # fzf config
 source <(fzf --zsh)
 FZF_CTRL_R_OPTS= source <(fzf --zsh)
@@ -111,8 +114,5 @@ zshaddhistory() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# gpg
-export GPG_TTY=$TTY
 
 
