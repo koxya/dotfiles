@@ -101,10 +101,8 @@ zinit wait lucid light-mode for \
     koya-masuda/peco-s3arch
 
 zinit light olets/zsh-abbr
-
 zshaddhistory() {
-    local line="${1%%$'\n'}"
-    [[ ! "$line" =~ "^(cd|jj?|lazygit|la|ll|ls|rm|rmdir)($| )" ]]
+   [[ "$?" == 0 ]
 }
 
 # bun completions
@@ -113,4 +111,8 @@ zshaddhistory() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# gpg
+export GPG_TTY=$TTY
+
 
