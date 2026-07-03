@@ -17,9 +17,10 @@ config.color_scheme = 'Tokyo Night'
 -- font
 config.font = wezterm.font("Hack Nerd Font Mono")
 config.font_size = 16
+config.command_palette_font_size = 16
 
 -- scroll backline
-config.scrollback_lines = 50000
+config.scrollback_lines = 100000
 
 -- Show which key table is active in the status area
 wezterm.on('update-right-status', function(window, pane)
