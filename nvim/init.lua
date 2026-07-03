@@ -336,7 +336,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup(plugins)
+if vim.g.vscode then
+  require('lazy').setup(common_plugins)
+else
+  require('lazy').setup(neovim_plugins)
+end
 
 require('telescope').load_extension('fzf')
 require('lsp')

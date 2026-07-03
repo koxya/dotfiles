@@ -1,16 +1,6 @@
-local nvim_lsp = require('lspconfig')
-local mason_lspconfig = require('mason-lspconfig')
-local mason = require('mason')
-mason.setup {
-  ui = {
-    check_outdated_packages_on_open = false,
-  },
-}
-
-mason_lspconfig.setup_handlers {
+require('mason-lspconfig').setup_handlers {
   function(server_name)
-    nvim_lsp[server_name].setup {
-      capabilities = require('cmp_nvim_lsp').default_capabilities(),
+    require('lspconfig')[server_name].setup {
     }
   end,
 }

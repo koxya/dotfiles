@@ -55,3 +55,10 @@ vim.keymap.set('n', 'mm', '*')
 -- clipboard
 vim.opt.clipboard = 'unnamedplus'
 
+-- apply other's changes
+vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+  callback = function()
+    vim.cmd("checktime")
+  end,
+})
