@@ -1,6 +1,8 @@
 [user]
 	name = Koya Masuda
-	email = 71430401+koya-masuda@users.noreply.github.com
+	email = 71430401+koxya@users.noreply.github.com
+	signingkey = 9AE2D61F2CA4996A
+
 [alias]
 	co = checkout
 	br = branch

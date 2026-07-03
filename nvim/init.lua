@@ -46,9 +46,6 @@ local neovim_plugins = {
     end,
   },
   {
-    'pocco81/auto-save.nvim'
-  },
-  {
     'kevinhwang91/nvim-hlslens',
   },
   {
@@ -79,7 +76,7 @@ local neovim_plugins = {
   {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      require('nvim-treesitter').setup({
+      require('nvim-treesitter.configs').setup({
         highlight = {
           enable = true,
           auto_install = true,
@@ -118,6 +115,7 @@ local neovim_plugins = {
         override_generic_sorter = true, -- override the generic sorter
         override_file_sorter = true,    -- override the file sorter
         case_mode = 'smart_case',       -- or 'ignore_case' or 'respect_case'
+        hidden = true,
         -- the default case_mode is 'smart_case'
       }
     },
@@ -157,7 +155,7 @@ local neovim_plugins = {
     -- Configurations for Nvim LSPin
     'williamboman/mason.nvim',
     config = function()
-      require('mason').setup()
+      require('mason').setup({})
     end
   },
   {
@@ -271,12 +269,6 @@ local neovim_plugins = {
     end
   },
   {
-    'jose-elias-alvarez/null-ls.nvim',
-    config = function()
-      require('null-ls').setup()
-    end
-  },
-  {
     'RRethy/vim-illuminate',
   },
   {
@@ -326,22 +318,10 @@ local neovim_plugins = {
     main = "ibl",
     dependencies = { 'HiPhish/rainbow-delimiters.nvim' }
   },
+  {
+    'github/copilot.vim'
+  }
 }
-
-local vscode_plugins = {
-
-}
-
-local function merge_tables(t1, t2)
-  local merged = {}
-  for _, v in ipairs(t1) do
-    table.insert(merged, v)
-  end
-  for _, v in ipairs(t2) do
-    table.insert(merged, v)
-  end
-  return merged
-end
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -356,12 +336,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local is_vscode = vim.g.vscode == 1
-require('lazy').setup(
-  merge_tables(common_plugins, is_vscode and vscode_plugins or neovim_plugins)
-)
+require('lazy').setup(plugins)
 
-if not is_vscode then
-  require('telescope').load_extension('fzf')
-  require('lsp')
-end
+require('telescope').load_extension('fzf')
+require('lsp')
+
