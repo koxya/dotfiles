@@ -1,6 +1,12 @@
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# mise
+eval "$(mise activate zsh)"
+
+# cargo
+source "$HOME/.cargo/env"
+
 # Neovim
 export PATH=$PATH:$HOME/nvim-macos/bin
 export XDF_CONFIG_HOME=$HOME/.config/nvim
