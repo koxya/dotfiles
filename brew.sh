@@ -1,12 +1,17 @@
 #!/usr/bin/env zsh
 
 commands=(
-    zsh
     awscli
     awslogs
+    bat
     curl
+    delta
     fzf
+    git
+    gh
     jq
+    mise
+    neovim
     pv
     rbenv
     ripgrep
@@ -14,7 +19,7 @@ commands=(
     tree
     volta
     watch
-    bat
+    zsh
 )
 
 for commands in "${commands[@]}" ; do
@@ -30,8 +35,8 @@ casks=(
     raycast
     visual-studio-code
     wezterm
+    zed
 )
 for casks in "${casks[@]}" ; do
     `brew install --cask ${casks}`
 done
-
