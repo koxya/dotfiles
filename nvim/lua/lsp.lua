@@ -1,9 +1,6 @@
-require('mason-lspconfig').setup_handlers {
-  function(server_name)
-    require('lspconfig')[server_name].setup {
-    }
-  end,
-}
+vim.lsp.config('*', {
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+})
 
 local cmp = require('cmp')
 local map = cmp.mapping
@@ -50,11 +47,17 @@ cmp.setup.cmdline({ '/', '?' }, {
   }
 })
 
+vim.diagnostic.config({
+  jump = {
+    on_jump = function(_, bufnr)
+      vim.diagnostic.open_float({ bufnr = bufnr, scope = 'cursor', focus = false })
+    end,
+  },
+})
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys
