@@ -18,13 +18,20 @@ export FZF_CTRL_R_OPTS="
 # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
+# ghq root directory
+GHQ_ROOT="$HOME/ghq"
+
 function fzf-cdr() {
-    local target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf --query "$LBUFFER"`
-    if [ -n "$target_dir" ]; then
-        BUFFER="cd ${target_dir}"
+    local selected_dir=$(ghq list | fzf)
+    if [ -n "$selected_dir" ]; then
+        BUFFER="cd ${GHQ_ROOT}/${selected_dir}"
         zle accept-line
+        zle clear-screen
+     else
+        zle redisplay
     fi
 }
+
 zle -N fzf-cdr
 bindkey "^]" fzf-cdr
 
