@@ -163,6 +163,7 @@ local neovim_plugins = {
     config = function()
       require('mason-lspconfig').setup {
         ensure_installed = { 'lua_ls' },
+        automatic_enable = { exclude = { 'copilot' } },
       }
     end
   },
@@ -318,9 +319,6 @@ local neovim_plugins = {
     main = "ibl",
     dependencies = { 'HiPhish/rainbow-delimiters.nvim' }
   },
-  {
-    'github/copilot.vim'
-  }
 }
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
