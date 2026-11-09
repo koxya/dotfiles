@@ -21,7 +21,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 # ghq root directory
 GHQ_ROOT="$HOME/ghq"
 
-function fzf-cdr() {
+function fzf-ghq() {
     local selected_dir=$(ghq list | fzf)
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${GHQ_ROOT}/${selected_dir}"
@@ -32,8 +32,8 @@ function fzf-cdr() {
     fi
 }
 
-zle -N fzf-cdr
-bindkey "^]" fzf-cdr
+zle -N fzf-ghq
+bindkey "^]" fzf-ghq
 
 setopt hist_expire_dups_first # 履歴を切り詰める際に、重複する最も古いイベントから消す
 setopt hist_ignore_all_dups   # 履歴が重複した場合に古い履歴を削除する
