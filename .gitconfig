@@ -1,7 +1,7 @@
 [user]
 	name = Koya Masuda
 	email = 71430401+koxya@users.noreply.github.com
-	signingkey = 9AE2D61F2CA4996A
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMQpPVGY9e4fv73tD+UbksxlCQw9Fd7ZNoXlX5bJ+1zs
 
 [alias]
 	co = checkout
@@ -36,4 +36,8 @@
 [commit]
 	gpgsign = true
 
+[gpg]
+	format = ssh
 
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
