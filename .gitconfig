@@ -1,7 +1,16 @@
 [user]
 	name = Koya Masuda
 	email = 71430401+koxya@users.noreply.github.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMQpPVGY9e4fv73tD+UbksxlCQw9Fd7ZNoXlX5bJ+1zs
+
+[include]
+	path = ~/.gitconfig.local
+
+## .gitcongig.local
+#
+# [user]
+# 	signingkey = XXX
+# [commit]
+# 	gpgsign = true
 
 [alias]
 	co = checkout
