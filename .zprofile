@@ -12,12 +12,6 @@ export PATH=$PATH:$HOME/nvim-macos/bin
 export XDF_CONFIG_HOME=$HOME/.config/nvim
 export MYVIMRC=$HOME/.config/nvim/init.lua
 
-# volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
-# Go
-
 # for windows
 # export PATH=$PATH:/mnt/c/Windows
 # for powershell
