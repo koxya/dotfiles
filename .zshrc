@@ -40,13 +40,6 @@ setopt share_history          # 全てのセッションで履歴を共有する
 # alias clip='iconv -f UTF-8 -t CP932 | clip.exe'
 # alias paste='powershell.exe -Command Get-Clipboard'
 
-# alias
-alias bruby='bundle exec ruby'
-alias brails='bundle exec rails'
-alias brake='bundle exec rake'
-alias brspec='bundle exec rspec'
-alias bexec='bundle exec'
-alias grun='go run'
 
 alias gss='git branch --list | cut -c 3- | fzf | xargs git switch'
 
@@ -120,3 +113,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/koyamasuda/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
