@@ -9,6 +9,7 @@ commands=(
     fzf
     git
     gh
+    ghq
     jq
     mise
     neovim
