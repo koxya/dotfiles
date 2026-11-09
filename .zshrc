@@ -1,6 +1,3 @@
-# gpg
-export GPG_TTY=$TTY
-
 # fzf config
 source <(fzf --zsh)
 FZF_CTRL_R_OPTS= source <(fzf --zsh)
