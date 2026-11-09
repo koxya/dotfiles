@@ -319,9 +319,6 @@ local neovim_plugins = {
     main = "ibl",
     dependencies = { 'HiPhish/rainbow-delimiters.nvim' }
   },
-  {
-    'github/copilot.vim'
-  }
 }
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
