@@ -1,6 +1,9 @@
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# aqua
+export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
+
 # mise
 eval "$(mise activate zsh)"
 
@@ -49,4 +52,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# claude code
+export PATH="$HOME/.local/bin:$PATH"
 
