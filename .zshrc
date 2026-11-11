@@ -99,7 +99,7 @@ zinit wait lucid light-mode for \
 
 zinit light olets/zsh-abbr
 zshaddhistory() {
-   [[ "$?" == 0 ]
+   [[ "$?" == 0 ]]
 }
 
 # bun completions
