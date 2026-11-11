@@ -1,5 +1,8 @@
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# brew bundle runs aqua's go proxy with a PATH that lacks aqua itself, so it fails.
+export HOMEBREW_BUNDLE_DUMP_NO_GO=1
+export HOMEBREW_BUNDLE_CLEANUP_NO_GO=1
 
 # aqua
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
